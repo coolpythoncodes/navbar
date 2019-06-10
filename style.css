@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background: #000;
+}
+
+/* Style for Home link */
+a:first-child{
+    color: #FF1EAD;
+    margin-left: 40px;
+    
+}
+
+/* Navbar */
+.navbar{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-links{
+    justify-content: center;
+}
+
+.link-border{
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.link-border:after{
+    content: ""; /* This is necessary for the pseudo element to work */
+    display: block; /* This will put the pseudo element on its own line */
+    width: 0; /* This is necessary for the pseudo element to work */
+    border-bottom: 3px solid #FF1EAD;
+    
+}
+.link-border:first-child:hover:after{
+    border-bottom: none;
+}
+.link-border:hover:after{
+    width:100%;
+    transition: 0.3s;
+}
+
+
+/* The box containing the slider*/
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+    background: #FF1EAD;
+    border-radius: 50px;
+}
+/* Hide checkbox */
+.switch input{
+    opacity: 0; 
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    top: 4px;
+    left: 5px;
+    transition: 0.5s;
+}
+/* Add sliding effect */
+input:checked + .slider{
+    transform: translateX(34px);
+}
+
+
+
+
+
+
+
+
+
